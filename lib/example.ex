@@ -11,7 +11,7 @@ defmodule Example do
       supervisor(Example.Endpoint, []),
       # Here you could define other workers and supervisors as children
       # worker(Example.Worker, [arg1, arg2, arg3]),
-      worker(RethinkDB.Connection, [[name: Example.Database, host: 'localhost', port: 28015]])
+      worker(Example.Database, [])
     ]
 
     # See http://elixir-lang.org/docs/stable/elixir/Supervisor.html
