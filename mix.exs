@@ -31,6 +31,7 @@ defmodule Example.Mixfile do
     [{:phoenix, "~> 1.0.2"},
      {:phoenix_html, "~> 2.1"},
      {:phoenix_live_reload, "~> 1.0", only: :dev},
+     {:rethinkdb, "~> 0.1.1"},
      {:cowboy, "~> 1.0"}]
   end
 end
