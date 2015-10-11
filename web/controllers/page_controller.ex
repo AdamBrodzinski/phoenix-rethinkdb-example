@@ -1,6 +1,7 @@
 defmodule Example.PageController do
   use Example.Web, :controller
-  use RethinkDB
+  import RethinkDB.Query, only: [table_create: 1, table: 2, table: 1, insert: 2]
+  #import RethinkDB.Query, except: [json: 2]
 
   # setup table and add posts
   def init(conn, _params) do
@@ -19,6 +20,6 @@ defmodule Example.PageController do
     |> Example.Database.run
     |> IO.inspect
 
-    Phoenix.Controller.json conn, results
+    json conn, results
   end
 end
